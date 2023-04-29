@@ -28,7 +28,10 @@ const Logo = styled.img`
 const Header = () => {
   return (
     <StyledHeader>
-      <Logo src={logo} alt="Logo SEGEL FLIX" />      
+      <Link to="/">
+        <Logo src={logo} alt="Logo SEGEL FLIX" />  
+      </Link>
+
       <Link to="/newvideo">
         <Button title="Novo vídeo" titleColor="#f5f5f5" backgroundColor="#000000" action={() => {}} />
       </Link>     
