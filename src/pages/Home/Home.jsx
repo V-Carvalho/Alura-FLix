@@ -3,10 +3,9 @@ import Banner from "../../components/Banner/Banner"
 import ListCategories from "../../components/ListCategories/ListCategories"
 
 const Main = styled.main`
-  flex: 1;
   display: flex;
   margin-top: 94px;
-  min-height: 100%;
+  min-height: 100vh;
   align-items: center;
   flex-direction: column;
   justify-content: center;
