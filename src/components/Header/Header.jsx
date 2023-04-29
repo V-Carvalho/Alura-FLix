@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../../assets/images/logo.png";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const StyledHeader = styled.header`
   top: 0;
@@ -25,15 +26,12 @@ const Logo = styled.img`
 
 // TODO: Retornar p/ home ao clicar
 const Header = () => {
-
-  function teste() {
-    console.log('teste')
-  }
-
   return (
     <StyledHeader>
-      <Logo src={logo} alt="Logo SEGEL FLIX" />
-      <Button title="Novo vídeo" titleColor="#f5f5f5" backgroundColor="#000000" action={teste} />
+      <Logo src={logo} alt="Logo SEGEL FLIX" />      
+      <Link to="/newvideo">
+        <Button title="Novo vídeo" titleColor="#f5f5f5" backgroundColor="#000000" action={() => {}} />
+      </Link>     
     </StyledHeader>
   );
 };

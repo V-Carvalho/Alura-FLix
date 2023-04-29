@@ -32,7 +32,6 @@ const Home = () => {
         <Banner/>
       </ContainerBanner>
 
-
       <ContainerListCategories>
         <ListCategories />
       </ContainerListCategories>
