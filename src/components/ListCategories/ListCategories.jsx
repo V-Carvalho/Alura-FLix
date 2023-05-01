@@ -62,8 +62,7 @@ const ListCategories = () => {
     <StyledListCategories>
       <List>
         {categoryData.map((category) =>
-          category.data.listVideos.length == 0 ? null : (
-
+          category.data.listVideos.length == 0 ? "" : (
             <Fragment key={category.data.id}>
               <TagCategory backgroundCcolor={category.data.categoryColor}>
                 {category.data.categoryName}
