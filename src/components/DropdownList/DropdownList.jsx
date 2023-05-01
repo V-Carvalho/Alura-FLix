@@ -65,7 +65,7 @@ const DropdownList = ({ label, value, borderColor, required, optionsDropdownList
       >
         // TODO: Criar key p/ cara option
         {optionsDropdownList.map((option) => {
-          return <option>{option.categoryName}</option>;
+          return <option key={option.id}>{option.categoryName}</option>;
         })}
       </StyledDropdownList>
     </ContainerDropdownList>
