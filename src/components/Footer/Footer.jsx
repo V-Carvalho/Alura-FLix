@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: space-around;
   border-top: 2px solid #2A7AE4;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
 `;
 
 const ContainerLogo = styled.div`
