@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #2A7AE4;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
 `;
 
@@ -24,7 +24,6 @@ const Logo = styled.img`
   width: 170px;
 `;
 
-// TODO: Retornar p/ home ao clicar
 const Header = () => {
   return (
     <StyledHeader>
