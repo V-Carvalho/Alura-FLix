@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Form from "../../components/Form/Form";
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, onSnapshot, collection, updateDoc  } from "firebase/firestore";
+import { getFirestore, onSnapshot, collection, updateDoc, getDocs, doc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -33,8 +33,6 @@ const ContainerForm = styled.section`
 `;
 
 const NewVideo = () => {
-
-  // TODO: Pegar lista de categorias do firebase  
   const [listCategories, setListCategories] = useState([]);
 
   const getListCategories = () => {
@@ -43,21 +41,35 @@ const NewVideo = () => {
         id: category.id,
         categoryName: category.data().categoryName,
       }));
-      
+
       data.unshift({ id: "", categoryName: "" });
       setListCategories(data);
     });
-  }
+  };
 
   useEffect(() => {
     getListCategories();
   }, []);
 
-  // TODO: Criar logica p/ atualizar a lista de videos
+ 
   const createNewVideo = async (title, urlVideo, category, description) => {
-    console.log(title) // "listVideos" tem q alutualizar o array inteiro no front depois atualiza no firestore
-    await updateDoc(doc(db, "segel-flix", "ALBqqolLLJDsDPOLGBUU"),  { urlVideo: "Los Angeles", }, { merge: true });     
-  }
+    const snapshot = await getDocs(collection(db, "segel-flix"));
+    snapshot.forEach((document) => {
+      if (category === document.data().categoryName) {
+        const newListVideos = [];
+
+        document.data().listVideos.forEach((video) => {
+          newListVideos.unshift({
+            urlVideo: video.urlVideo
+          })
+        })
+
+        newListVideos.unshift({ urlVideo: urlVideo });
+
+        updateDoc(doc(db, "segel-flix", document.id), { listVideos: newListVideos });
+      }
+    });
+  };
 
   return (
     <Main>
@@ -65,7 +77,12 @@ const NewVideo = () => {
         <Form
           optionsDropdownList={listCategories}
           formReturn={(value) => {
-            createNewVideo(value.title, value.urlVideo, value.category, value.description);
+            createNewVideo(
+              value.title,
+              value.urlVideo,
+              value.category,
+              value.description
+            );
           }}
         />
       </ContainerForm>
