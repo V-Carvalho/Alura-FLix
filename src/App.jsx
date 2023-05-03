@@ -7,6 +7,8 @@ import NewVideo from "./pages/NewVideo/NewVideo"
 import NewCategory from "./pages/NewCategory/NewCategory"
 import Footer from "./components/Footer/Footer";
 
+// TODO: implentar o conceito de contextAPI
+
 function App() {
   return (
     <BrowserRouter>
