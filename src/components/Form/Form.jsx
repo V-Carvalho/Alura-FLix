@@ -4,7 +4,7 @@ import Input from "../Input/Input";
 import DropdownList from "../DropdownList/DropdownList.jsx";
 import TextArea from "../TextArea/TextArea";
 import Button from "../Button/Button";
-
+import { Link } from "react-router-dom";
 
 const TitleForm = styled.h2`
   display: flex;
@@ -105,7 +105,7 @@ const Form = ({ optionsDropdownList, formReturn }) => {
         <ContainerButtonSaveClear>
           <Button
             title="Salvar"
-            backgroundColor="#2A7AE4"            
+            backgroundColor="#2A7AE4"                       
           />
           <Button
             title="Limpar"
@@ -116,16 +116,13 @@ const Form = ({ optionsDropdownList, formReturn }) => {
             }} 
           />
         </ContainerButtonSaveClear>
-        
-        <Button
-         title="Nova Categoria"
-         backgroundColor="#2A7AE4"
-         action={(event) => {
-          event.preventDefault();
-          // TODO: Criar tela --> Nova Categoria
-          console.log('Vai pra tela --> Nova Categoria')
-        }}  
-        />
+
+        <Link to="/newcategory">
+          <Button
+          title="Nova Categoria"
+          backgroundColor="#2A7AE4"           
+          />
+        </Link>
       </ContainerButtonsForm>
     </StyledForm>
   );
