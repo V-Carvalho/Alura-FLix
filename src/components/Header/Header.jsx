@@ -32,7 +32,15 @@ const Header = () => {
       </Link>
 
       <Link to="/newvideo">
-        <Button title="Novo vídeo" titleColor="#f5f5f5" backgroundColor="#000000" action={() => {}} />
+        <Button
+          height="50px"
+          width="180px"
+          fontSize="20px" 
+          title="Novo vídeo" 
+          titleColor="#f5f5f5" 
+          borderColor="#f5f5f5" 
+          backgroundColor="#000000" 
+        />
       </Link>     
     </StyledHeader>
   );
