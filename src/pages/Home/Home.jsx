@@ -25,6 +25,7 @@ const ContainerListCategories = styled.section`
   justify-content: center;
 `;
 
+// TODO: Pegar os dados a ser usado na home aqui
 const Home = () => {
   return (
     <Main>
