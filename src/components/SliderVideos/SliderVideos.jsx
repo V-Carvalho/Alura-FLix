@@ -59,6 +59,7 @@ const SliderVideos = ({ listVideos, categoryColor }) => {
   
   const refSlider = useRef(null);
 
+  // TODO: refatorar essas funções, trnasformar um uma só
   const scroolLeftSlider = () => {
     console.log('esquerda');
     refSlider.current.scrollLeft -= 200;
