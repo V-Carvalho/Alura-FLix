@@ -19,6 +19,7 @@ const LabelInput = styled.label`
 `;
 
 const StyledInput = styled.input`
+  width: 100%;
   height: 30px;
   outline: none;
   font-size: 14px;
