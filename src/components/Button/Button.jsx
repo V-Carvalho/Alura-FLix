@@ -15,7 +15,6 @@ const StyledButton = styled.button`
   background-color: ${(props) => props.backgroundColor};  
 `;
 
-// TODO: Refatorar o botão não demais telas --> Add borderColor / height / width / font-size
 const Button = ({ height, width, fontSize, title, borderColor, titleColor, backgroundColor, action }) => {
   return (
     <StyledButton height={height} width={width} fontSize={fontSize} titleColor={titleColor} borderColor={borderColor} backgroundColor={backgroundColor} onClick={action}>
