@@ -104,11 +104,19 @@ const Form = ({ optionsDropdownList, formReturn }) => {
       <ContainerButtonsForm>
         <ContainerButtonSaveClear>
           <Button
+            height="50px"
+            width="180px"
+            fontSize="20px" 
             title="Salvar"
+            titleColor="#000000" 
             backgroundColor="#2A7AE4"                       
           />
           <Button
+            height="50px"
+            width="180px"
+            fontSize="20px" 
             title="Limpar"
+            titleColor="#000000"
             backgroundColor="#9E9E9E"
             action={(event) => {
               event.preventDefault();
@@ -119,8 +127,12 @@ const Form = ({ optionsDropdownList, formReturn }) => {
 
         <Link to="/newcategory">
           <Button
-          title="Nova Categoria"
-          backgroundColor="#2A7AE4"           
+            height="50px"
+            width="180px"
+            fontSize="20px" 
+            title="Nova Categoria"
+            titleColor="#000000"
+            backgroundColor="#2A7AE4"           
           />
         </Link>
       </ContainerButtonsForm>
