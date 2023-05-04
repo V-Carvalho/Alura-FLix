@@ -27,18 +27,35 @@ const List = styled.ul`
   list-style: none;
 `;
 
-const TagCategory = styled.li`
+const ContainerTags = styled.li`
+  width: 100%;
+  display: flex;
+`;
+
+const TagCategory = styled.p`
   height: 60px;
   display: flex;
   font-size: 1.5vw;
   color: #f5f5f5;
   padding: 0px 10px;
-  margin: 0px 50px;
   width: fit-content;
   border-radius: 4px;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.backgroundCcolor}; ;
+  margin: 0px 0px 0px 50px;
+  background-color: ${(props) => props.backgroundCcolor};
+`;
+
+const TagDescription = styled.p`
+  height: 60px;
+  display: flex;
+  font-size: 1.3vw;
+  color: #f5f5f5;
+  padding: 0px 10px;
+  width: fit-content;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
 `;
 
 const ListCategories = () => {
@@ -64,9 +81,16 @@ const ListCategories = () => {
         {categoryData.map((category) =>
           category.data.listVideos.length == 0 ? "" : (
             <Fragment key={category.data.id}>
-              <TagCategory backgroundCcolor={category.data.categoryColor}>
-                {category.data.categoryName}
-              </TagCategory>
+              <ContainerTags>
+                <TagCategory backgroundCcolor={category.data.categoryColor}>
+                  {category.data.categoryName} 
+                </TagCategory>
+
+                <TagDescription >
+                  {category.data.categoryDescription} 
+                </TagDescription>
+              </ContainerTags> 
+              
               <SliderVideos
                 listVideos={category.data.listVideos}
                 categoryColor={category.data.categoryColor}
