@@ -13,7 +13,7 @@ Este aplicação é um dos desafios propostos pela escola Alura em parceria com 
 
 ### 🌐 Link do projeto
 
-- [Clique Aqui!](https://google.com.br)
+- [Clique Aqui!](https://google.com)
 
 ### 🔧 Tecnologias utilizadas
 
