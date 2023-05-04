@@ -108,7 +108,8 @@ const Form = ({ optionsDropdownList, formReturn }) => {
             width="180px"
             fontSize="20px" 
             title="Salvar"
-            titleColor="#000000" 
+            titleColor="#FFFFFF"
+            borderColor="transparent"
             backgroundColor="#2A7AE4"                       
           />
           <Button
@@ -131,7 +132,8 @@ const Form = ({ optionsDropdownList, formReturn }) => {
             width="180px"
             fontSize="20px" 
             title="Nova Categoria"
-            titleColor="#000000"
+            titleColor="#FFFFFF"
+            borderColor="transparent"
             backgroundColor="#2A7AE4"           
           />
         </Link>
