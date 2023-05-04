@@ -53,7 +53,6 @@ const NewCategory = () => {
     getListCategories();
   }, []);
 
-  // TODO: Função que cria uma nova categoria finalizada
   const createNewCategory = async (categoryName, categoryDescription, categoryColor) => {
     await addDoc(collection(db, "segel-flix"), {
       categoryName: categoryName,
@@ -63,7 +62,6 @@ const NewCategory = () => {
     });
   };
 
-  // TODO: Função que atualiza os dados da categoria finalizada 
   const updateCategoryData = (categoryId, categoryName, categoryDescription, categoryColor) => {
     updateDoc(doc(db, "segel-flix", categoryId), { 
       categoryName: categoryName,
@@ -72,7 +70,6 @@ const NewCategory = () => {
     });
   }
 
-  // TODO: Função que deleta uma nova categoria finalizada
   const deleteCategory = async (categoryId) => {
     await deleteDoc(doc(db, "segel-flix", categoryId)); 
   }
