@@ -10,6 +10,10 @@ const StyledFooter = styled.footer`
   justify-content: space-around;
   border-top: 2px solid #2A7AE4;
   background-color: rgba(0, 0, 0, 1);
+
+  @media (max-width: 768px) {
+    display: none;
+  } 
 `;
 
 const ContainerLogo = styled.div`
