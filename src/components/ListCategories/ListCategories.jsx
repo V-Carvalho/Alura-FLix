@@ -9,6 +9,7 @@ const StyledListCategories = styled.div`
 
   @media (max-width: 768px) {
     margin-top: 80px;
+    margin-bottom: 60px;
   }
 `;
 
