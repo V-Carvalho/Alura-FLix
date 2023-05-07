@@ -7,6 +7,13 @@ const StyledVideoCard = styled.div`
   height: ${(props) => props.height};
   min-width: ${(props) => props.width};
   border: 4px solid ${(props) => props.borderColor};
+
+  @media (max-width: 768px) {
+    width: 290px;
+    border: none;
+    height: 100%;
+    margin-bottom: 10px;
+  }
 `;
 
 const VideoCard = ({ width, height, borderColor, urlVideo }) => {

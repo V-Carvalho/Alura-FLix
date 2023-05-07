@@ -13,6 +13,10 @@ const TitleForm = styled.h2`
   padding: 40px 0px;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    font-size: 35px;    
+  }
 `;
 
 const StyledForm = styled.form`
@@ -20,6 +24,10 @@ const StyledForm = styled.form`
   display: flex;
   margin: 0px 40px;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin: 0px 10px;    
+  }
 `;
 
 const ContainerButtonsForm = styled.div`
@@ -34,7 +42,18 @@ const ContainerButtonSaveClear = styled.div`
   flex: 1;
   gap: 40px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row;  
+
+  @media (max-width: 768px) {
+    gap: 0px;
+    justify-content: space-around;    
+  }
+`;
+
+const ContainerTable = styled.div`
+  @media (max-width: 768px) {
+    display: none;    
+  } 
 `;
 
 const Form = ({ deleteCategory, listCategories, formReturn }) => {
@@ -117,16 +136,18 @@ const Form = ({ deleteCategory, listCategories, formReturn }) => {
           />
         </ContainerButtonSaveClear>
       </ContainerButtonsForm>
-      <Table
-        deleteCategory={deleteCategory} 
-        listCategories={listCategories}
-        tableReturn={(value) => {          
-          setCategoryId(value.categoryId)
-          setCategoryName(value.categoryName)
-          setCategoryDescription(value.categoryDescription)
-          setCategoryColor(value.categoryColor)          
-        }}      
-      />
+      <ContainerTable>
+        <Table
+          deleteCategory={deleteCategory} 
+          listCategories={listCategories}
+          tableReturn={(value) => {          
+            setCategoryId(value.categoryId)
+            setCategoryName(value.categoryName)
+            setCategoryDescription(value.categoryDescription)
+            setCategoryColor(value.categoryColor)          
+          }}      
+        />
+      </ContainerTable>      
     </StyledForm>
   );
 };

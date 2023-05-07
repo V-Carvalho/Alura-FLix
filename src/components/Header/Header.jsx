@@ -22,14 +22,16 @@ const StyledHeader = styled.header`
     padding: 0px;
     justify-content: center;
   }
-
-  @media (min-width: 1024px) {
-  }
 `;
 
 const Logo = styled.img`
   height: 40px;
   width: 170px;
+
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 28px;   
+  } 
 `;
 
 const ContainerButton = styled.div`

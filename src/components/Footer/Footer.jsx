@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "../../assets/images/logo.png";
+import { useLocation } from "react-router-dom";
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -9,10 +10,10 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: space-around;
   border-top: 2px solid #2A7AE4;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 1);   
 
   @media (max-width: 768px) {
-    display: none;
+    display:  ${(props) => props.pageLocation === "/" ? "none" : "flex"}    
   } 
 `;
 
@@ -26,6 +27,11 @@ const ContainerLogo = styled.div`
 const Logo = styled.img`
   width: 252px;
   height: 60px;
+
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 28px;   
+  } 
 `;
 
 const ContainerSocialMedia = styled.div`
@@ -34,6 +40,10 @@ const ContainerSocialMedia = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display:  none;    
+  }
 `;
 
 const IconSocialMedia = styled.img`
@@ -45,8 +55,10 @@ const IconSocialMedia = styled.img`
 `;
 
 const Footer = () => {
+  const pageLocation = useLocation();
+
   return (
-    <StyledFooter>
+    <StyledFooter pageLocation={pageLocation.pathname}>
       <ContainerLogo >
         <Logo src={logo} alt="Logo SEGEL FLIX" />
       </ContainerLogo>

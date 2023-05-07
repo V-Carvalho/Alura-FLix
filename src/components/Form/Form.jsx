@@ -14,6 +14,10 @@ const TitleForm = styled.h2`
   padding: 40px 0px;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    font-size: 35px;    
+  }
 `;
 
 const StyledForm = styled.form`
@@ -21,6 +25,10 @@ const StyledForm = styled.form`
   display: flex;
   margin: 0px 40px;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin: 0px 10px;    
+  }
 `;
 
 const ContainerButtonsForm = styled.div`
@@ -36,9 +44,20 @@ const ContainerButtonSaveClear = styled.div`
   gap: 40px;
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 768px) {
+    gap: 0px;
+    justify-content: space-around;    
+  } 
 `;
 
-const Form = ({ optionsDropdownList, formReturn }) => {
+const ContainerButtonNewCategory = styled.div`
+  @media (max-width: 768px) {
+    display: none;    
+  } 
+`;
+
+const Form = ({ optionsDropdownList, formReturn }) => {  
   const [title, setTitle] = useState("");
   const [urlVideo, setUrlVideo] = useState("");
   const [category, setCategory] = useState("");  
@@ -127,15 +146,17 @@ const Form = ({ optionsDropdownList, formReturn }) => {
         </ContainerButtonSaveClear>
 
         <Link to="/newcategory">
-          <Button
-            height="50px"
-            width="180px"
-            fontSize="20px" 
-            title="Nova Categoria"
-            titleColor="#FFFFFF"
-            borderColor="transparent"
-            backgroundColor="#2A7AE4"           
-          />
+          <ContainerButtonNewCategory>
+            <Button
+              height="50px"
+              width="180px"
+              fontSize="20px" 
+              title="Nova Categoria"
+              titleColor="#FFFFFF"
+              borderColor="transparent"
+              backgroundColor="#2A7AE4"           
+            />
+          </ContainerButtonNewCategory>          
         </Link>
       </ContainerButtonsForm>
     </StyledForm>

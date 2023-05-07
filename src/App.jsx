@@ -8,8 +8,6 @@ import NewCategory from "./pages/NewCategory/NewCategory";
 import Footer from "./components/Footer/Footer";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
-// TODO: implentar o contextAPI
-
 function App() {
   return (
     <BrowserRouter>

@@ -22,6 +22,12 @@ const Slider = styled.ul`
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
+  
+  @media (max-width: 768px) {
+    height: 180px;
+    margin: 20px 10px;    
+    overflow-y: hidden;
+  }
 
   &::-webkit-scrollbar {
     height: 10px;
@@ -46,6 +52,10 @@ const IconScroolSlider = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 768px) {
+    display: none;    
+  }
+
   &:hover {
     transform: scale(1.5);
   }
@@ -59,14 +69,11 @@ const SliderVideos = ({ listVideos, categoryColor }) => {
   
   const refSlider = useRef(null);
 
-  // TODO: refatorar essas funções, trnasformar um uma só
   const scroolLeftSlider = () => {
-    console.log('esquerda');
     refSlider.current.scrollLeft -= 200;
   };
 
   const scroolRightSlider = () => {
-    console.log('direita');
     refSlider.current.scrollLeft += 200;
   };  
 
