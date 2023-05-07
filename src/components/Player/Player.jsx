@@ -7,6 +7,7 @@ const Player = ({urlVideo}) => {
       height={"100%"}
       controls={true}
       url={urlVideo}
+      light={true}
     />
   );
 };
