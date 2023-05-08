@@ -9,6 +9,8 @@ Este aplicação é um dos desafios propostos pela escola Alura em parceria com 
 * Utilizar o Trello como ferramenta para gerenciar o desenvolvimento do seu projeto;
 * Utilizar HTML, JavaScript e React(React Router, Styled Components, Function Components e Hooks).
 
+https://user-images.githubusercontent.com/34304319/236935207-590dcab4-2fcc-4723-8c36-4a2c2255d0e2.mp4
+
 ### 🌐 Link do projeto
 
 - [Clique Aqui!](https://alura-flix.netlify.app/)
