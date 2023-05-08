@@ -9,7 +9,8 @@ Este aplicação é um dos desafios propostos pela escola Alura em parceria com 
 * Utilizar o Trello como ferramenta para gerenciar o desenvolvimento do seu projeto;
 * Utilizar HTML, JavaScript e React(React Router, Styled Components, Function Components e Hooks).
 
-<img src="https://user-images.githubusercontent.com/34304319/228600300-7b8d37c9-f65e-4345-87aa-dc9fe7aa319e.gif" height="400" width="100%">
+<img src="https://user-images.githubusercontent.com/34304319/236710811-049f0ba2-b90f-4ef9-845a-37b9abfee3b2.gif" height="400" width="100%">
+
 <img src="https://user-images.githubusercontent.com/34304319/228600300-7b8d37c9-f65e-4345-87aa-dc9fe7aa319e.gif" height="400" width="100%">
 <img src="https://user-images.githubusercontent.com/34304319/228600300-7b8d37c9-f65e-4345-87aa-dc9fe7aa319e.gif" height="400" width="100%">
 <img src="https://user-images.githubusercontent.com/34304319/228600300-7b8d37c9-f65e-4345-87aa-dc9fe7aa319e.gif" height="400" width="100%">
